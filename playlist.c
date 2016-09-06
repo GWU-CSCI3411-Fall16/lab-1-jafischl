@@ -21,7 +21,7 @@ struct playlist_t {
 void print(struct playlist_t* pl) {
 	struct node_t* ptr;
 	ptr = pl->head;
-	while (!ptr) {
+	while (ptr != NULL) {
 		printf("%s by %s\n", ptr->song->title, ptr->song->artist);
 		ptr = ptr->next;
 	}
